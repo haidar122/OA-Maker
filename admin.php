@@ -18,6 +18,7 @@ require_once("session_check.php");
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <!-- Lightbox-->
   <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
@@ -83,7 +84,7 @@ require_once("session_check.php");
 					<?php } else { ?>
 
 						<li class="nav-item">
-							<a href="logout.php" class="nav-link" aria-current="page">LogOut <?= $sessionName ?></a>
+							<a href="logout.php" class="nav-link" aria-current="page" class="btn btn-primary" role="button"><i class="fa fa-sign-out"></i>Log out <?= $sessionName ?></a>
 						</li>
 
 					<?php } ?>
@@ -102,7 +103,7 @@ require_once("session_check.php");
 						
 					</div>
 					<div class="col text-end">
-						<a href="form_barang.php" class="btn btn-primary" role="button">Tambah Barang</a>
+						<a href="form_barang.php" class="btn btn-primary" role="button"><i class="fa fa-plus-circle"></i>Tambah Barang</a>
 					</div>
 				</div>
 				<div class="row">
@@ -128,15 +129,15 @@ require_once("session_check.php");
 								?>
 									<tr>
 										<td><?php echo $no ?></td>
-										<td><img src="file/<?php echo $b['foto'] ?>" width="35" height="40"></td>
+										<td><img src="<?php echo $b['foto'] ?>" width="35" height="40"></td>
 										<td><?php echo $b['kode']; ?></td>
 										<td><?php echo $b['nama']; ?></td>
 										<td><?php echo $b['jenis']; ?></td>
 										<td><?php echo $b['jumlah']; ?></td>
 										<td><?php echo "Rp. " . number_format($b['harga']) . " ,-"; ?></td>
 										<td>
-											<a href="edit.php?kode=<?php echo htmlspecialchars($b['kode']); ?>" class="btn btn-warning" role="button">Edit</a>
-											<a href="delete.php?kode=<?php echo $b['kode']; ?>" class="btn btn-danger" role="button">Delete</a>
+											<a href="edit.php?kode=<?php echo htmlspecialchars($b['kode']); ?>" class="btn btn-warning" role="button"><i class="fa fa-edit"></i></a>
+											<a href="delete.php?kode=<?php echo $b['kode']; ?>" class="btn btn-danger" role="button"><i class="fa fa-trash"></i></a>
 										</td>
 									</tr>
 								<?php

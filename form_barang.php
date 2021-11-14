@@ -52,7 +52,7 @@ $kodeBarang = $huruf . sprintf("%03s", $urutan);
             <div class="row d-flex justify-content-center">
                 <div class="col col-8 p-4 bg-light">
                 <h2>Input Barang</h2>
-                    <form method="post" action="simpan.php">
+                    <form method="post" action="simpan.php" enctype="multipart/form-data">
                     <div class="form-group">
 				<label>Foto :</label>
 				<input type="file" name="foto" required="required">
@@ -75,15 +75,9 @@ $kodeBarang = $huruf . sprintf("%03s", $urutan);
                                 <option>Cetak</option>
                             </select>
                             </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleFormControlSelect1">Jumlah</label>
-                            <select class="form-control" name="jumlah" required="required">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <div class="form-group mb-2">
+                                <label for="formGroupExampleInput">Jumlah</label>
+                                <input type="text" class="form-control" name="jumlah" required="required" placeholder="jumlah">
                             </div>
                             <div class="form-group mb-2">
                                 <label for="formGroupExampleInput">Harga</label>

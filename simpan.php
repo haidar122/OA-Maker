@@ -12,8 +12,9 @@ $files = $_FILES['foto'];
 $path = "file/";
 
 if (!empty($files['name'])) {
+	
 	$filepath = $path . $files["name"];
-	$upload = move_uploaded_file($files["tmp_name"], $filepath);
+	$upload = move_uploaded_file($files["tmp_name"], $filepath); 
 } else {
 	$filepath = "";
 	$upload = false;
