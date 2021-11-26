@@ -41,7 +41,7 @@ foreach ($result as $barang) {
             <div class="row d-flex justify-content-center">
                 <div class="col col-8 p-4 bg-light">
                     <h2>Edit Barang</h2>
-                    <form method="post" action="action_edit.php">
+                    <form method="post" action="action_edit.php" enctype="multipart/form-data">
                     <?php if (!is_null($foto) && !empty($foto)) {  ?>
 						<div class="form-group mb-2">
 							<img src="<?=$foto?>" class="preview">
@@ -70,16 +70,10 @@ foreach ($result as $barang) {
                                 <option>Cetak</option>
                             </select>
                             </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleFormControlSelect1">Jumlah</label>
-                            <select class="form-control" name="jumlah" required="required" value="<?php echo $jumlah ?>">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
+                            <div class="form-group mb-2">
+                                <label for="formGroupExampleInput">Jumlah</label>
+                                <input type="text" class="form-control" name="jumlah" required="required" value="<?php echo $jumlah ?>">
+                            </div>
                         <div class="form-group mb-2">
                             <label for="formGroupExampleInput">Harga</label>
                             <input type="text" class="form-control" name="harga" required="required" value="<?php echo $harga ?>">

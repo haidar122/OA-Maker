@@ -24,7 +24,7 @@ if ($error == 1) {
 	exit();
 }
 
-$query = "INSERT INTO admin (user, nama, password)
+$query = "INSERT INTO petugas (user, nama, password)
 		VALUES('{$user}', '{$name}', '{$password}')";
 $insert = mysqli_query($mysqli, $query);
 

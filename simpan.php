@@ -41,5 +41,4 @@ if ($insert == false) {
 	header("Location: admin.php");
 }
 
-
 ?>

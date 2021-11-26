@@ -9,7 +9,7 @@ if (isset($_POST['kode'])) {
 	exit();
 }
 
-$query = "SELECT * FROM barang WHERE kode = '{$kode}'";
+$query = "SELECT * FROM barang WHERE kode = '{$kode_barang}'";
 $result = mysqli_query($mysqli, $query);
 
 if (isset($_POST['kode'])) $kode_barang = $_POST['kode'];
@@ -22,12 +22,17 @@ if (isset($_POST['jumlah'])) $jumlah = $_POST['jumlah'];
 
 if (isset($_POST['harga'])) $harga = $_POST['harga'];
 
+foreach ($result as $siswa) {
+	$foto = $siswa["foto"];
+}
+
+
 $files = $_FILES['foto'];
 $path = "file/";
 
 if (!empty($files["name"])) {
 	$filepath = $path . $files["name"];
-	$upload = move_uploaded_file($files["tmp_name"], $filepath);
+	$upload = move_uploaded_file($files["tmp_name"], $filepath); 
 	if ($upload) {
 		unlink($foto);
 	}
@@ -48,7 +53,7 @@ $query = "UPDATE barang SET
         jumlah = '{$jumlah}',
 		harga = '{$harga}',
 		foto = '{$filepath}'
-	WHERE kode = '{$kode}' ";
+	WHERE kode = '{$kode_barang}' ";
 
 $insert = mysqli_query($mysqli, $query);
 

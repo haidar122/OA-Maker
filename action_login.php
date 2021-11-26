@@ -17,7 +17,7 @@ if ($error == 1) {
 
 $password = hash("sha256", $password);
 
-$query = "SELECT * FROM admin WHERE user = '{$user}'";
+$query = "SELECT * FROM petugas WHERE user = '{$user}'";
 $result = mysqli_query($mysqli, $query);
 
 $data = mysqli_fetch_assoc($result);

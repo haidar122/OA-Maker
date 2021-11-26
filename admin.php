@@ -151,6 +151,7 @@ require_once("session_check.php");
 			<?php } else echo "<h2>Login Terlebih Dahulu!</h2>"; ?>
 		</div>
 	</div>
+	</div>
 </body>
 
 </html>
