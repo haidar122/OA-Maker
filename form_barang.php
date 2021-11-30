@@ -73,6 +73,7 @@ $kodeBarang = $huruf . sprintf("%03s", $urutan);
                                 <option>Souvenir</option>
                                 <option>Accesoris</option>
                                 <option>Cetak</option>
+                                <option>Sablon</option>
                             </select>
                             </div>
                             <div class="form-group mb-2">
