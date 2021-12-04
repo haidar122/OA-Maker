@@ -6,6 +6,7 @@ $kode = $_POST['kode'];
 $nama = $_POST['nama'];
 $jenis = $_POST['jenis'];
 $jumlah = $_POST['jumlah'];
+$deskripsi = $_POST['deskripsi'];
 $harga = $_POST['harga'];
 
 $files = $_FILES['foto'];
@@ -31,8 +32,8 @@ if ($error == 1) {
 	exit();
 }
 
-$query = "INSERT INTO barang (kode, nama, jenis, jumlah, harga, foto)
-		VALUES('{$kode}', '{$nama}','{$jenis}','{$jumlah}','{$harga}', '{$filepath}');";
+$query = "INSERT INTO barang (kode, nama, jenis, jumlah, deskripsi, harga, foto)
+		VALUES('{$kode}', '{$nama}','{$jenis}','{$jumlah}','{$deskripsi}','{$harga}', '{$filepath}');";
 $insert = mysqli_query($mysqli, $query);
 
 if ($insert == false) {

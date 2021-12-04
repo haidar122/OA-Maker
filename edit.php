@@ -20,6 +20,7 @@ foreach ($result as $barang) {
 	$nama = $barang["nama"];
     $jenis = $barang["jenis"];
     $jumlah = $barang["jumlah"];
+    $deskripsi = $barang["deskripsi"];
 	$harga = $barang["harga"];
 }
 
@@ -31,7 +32,7 @@ foreach ($result as $barang) {
     <title>Barang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
@@ -70,10 +71,14 @@ foreach ($result as $barang) {
                                 <option>Cetak</option>
                             </select>
                             </div>
-                            <div class="form-group mb-2">
+                        <div class="form-group mb-2">
                                 <label for="formGroupExampleInput">Jumlah</label>
                                 <input type="text" class="form-control" name="jumlah" required="required" value="<?php echo $jumlah ?>">
-                            </div>
+                        </div>
+                        <div class="form-group mb-2">
+                                <label for="formGroupExampleInput">Deskripsi</label>
+                                <textarea class="form-control" cols="30" rows="5" name="deskripsi" required="required"><?php echo $deskripsi ?></textarea>
+                        </div>
                         <div class="form-group mb-2">
                             <label for="formGroupExampleInput">Harga</label>
                             <input type="text" class="form-control" name="harga" required="required" value="<?php echo $harga ?>">

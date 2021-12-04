@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Nov 2021 pada 16.52
+-- Waktu pembuatan: 04 Des 2021 pada 06.02
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.13
 
@@ -33,15 +33,16 @@ CREATE TABLE `barang` (
   `jenis` varchar(50) NOT NULL,
   `jumlah` int(11) NOT NULL,
   `harga` int(11) NOT NULL,
-  `foto` text DEFAULT NULL
+  `foto` text DEFAULT NULL,
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `barang`
 --
 
-INSERT INTO `barang` (`kode`, `nama`, `jenis`, `jumlah`, `harga`, `foto`) VALUES
-('BRG001', 'Jaket sablon', 'Sablon', 5, 100000, 'file/jaket.jpg');
+INSERT INTO `barang` (`kode`, `nama`, `jenis`, `jumlah`, `harga`, `foto`, `deskripsi`) VALUES
+('BRG001', 'celemek memasak', 'Cetak', 1, 100000, 'file/clemek.jpg', 'Nyaman di pakai');
 
 -- --------------------------------------------------------
 

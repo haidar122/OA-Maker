@@ -81,6 +81,10 @@ $kodeBarang = $huruf . sprintf("%03s", $urutan);
                                 <input type="text" class="form-control" name="jumlah" required="required" placeholder="jumlah">
                             </div>
                             <div class="form-group mb-2">
+                                <label for="formGroupExampleInput">Deskripsi</label>
+                                <textarea class="form-control" cols="30" rows="5" name="deskripsi" required="required" placeholder="deskripsi"></textarea>
+                            </div>
+                            <div class="form-group mb-2">
                                 <label for="formGroupExampleInput">Harga</label>
                                 <input type="text" class="form-control" name="harga" required="required" placeholder="harga">
                             </div>

@@ -1,0 +1,6 @@
+.form-group .preview{
+	height: 120px;
+	width: 120px;
+	object-fit: cover;
+	/*border-radius: 50%;*/
+}

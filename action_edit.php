@@ -20,6 +20,8 @@ if (isset($_POST['jenis'])) $jenis = $_POST['jenis'];
 
 if (isset($_POST['jumlah'])) $jumlah = $_POST['jumlah'];
 
+if (isset($_POST['deskripsi'])) $deskripsi = $_POST['deskripsi'];
+
 if (isset($_POST['harga'])) $harga = $_POST['harga'];
 
 foreach ($result as $siswa) {
@@ -51,6 +53,7 @@ $query = "UPDATE barang SET
 		nama = '{$nama}',
 		jenis = '{$jenis}',
         jumlah = '{$jumlah}',
+		deskripsi = '{$deskripsi}',
 		harga = '{$harga}',
 		foto = '{$filepath}'
 	WHERE kode = '{$kode_barang}' ";

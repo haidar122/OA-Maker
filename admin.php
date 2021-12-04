@@ -117,6 +117,7 @@ require_once("session_check.php");
 									<th>Nama Barang</th>
 									<th>Jenis</th>
 									<th>Jumlah</th>
+									<th>Deskripsi</th>
 									<th>Harga</th>
 									<th colspan='2'>AKSI</th>
 								</tr>
@@ -134,6 +135,7 @@ require_once("session_check.php");
 										<td><?php echo $b['nama']; ?></td>
 										<td><?php echo $b['jenis']; ?></td>
 										<td><?php echo $b['jumlah']; ?></td>
+										<td><?php echo $b['deskripsi']; ?></td>
 										<td><?php echo "Rp. " . number_format($b['harga']) . " ,-"; ?></td>
 										<td>
 											<a href="edit.php?kode=<?php echo htmlspecialchars($b['kode']); ?>" class="btn btn-warning" role="button"><i class="fa fa-edit"></i></a>
